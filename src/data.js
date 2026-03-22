@@ -63,7 +63,7 @@ export const socialLinks = [
 ];
 
 export const featuredStats = [
-  { label: "Projects Completed", value: 20, suffix: "+" },
+  { label: "Projects Completed", value: 8, suffix: "+" },
   { label: "Clients Worked With", value: 10, suffix: "+" },
   { label: "Years of Experience", value: 3, suffix: "+" },
  
