@@ -396,7 +396,7 @@ const AboutPage = () => {
 
             {/* Tag pills */}
             <div className="tag-row">
-              {["Full-Stack", "AI / ML", "Cloud", "React", "Node.js", "UX-Focused"].map((t) => (
+              {["Full-Stack", "Cloud", "React", "Node.js", "UX-Focused"].map((t) => (
                 <span key={t} className="tag">{t}</span>
               ))}
             </div>
