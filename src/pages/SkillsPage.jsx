@@ -316,17 +316,17 @@ const SkillCard = ({ tool, index }) => {
               </div>
             </div>
             <div className="flex flex-1 flex-col items-center justify-center">
-              <p className="text-[3.4rem] font-bold leading-none tracking-[-0.06em] text-cyan-300 drop-shadow-[0_0_24px_rgba(34,211,238,0.18)]">
+              <p className="text-[3.4rem] font-bold leading-none tracking-[-0.06em] text-white drop-shadow-[0_3px_18px_rgba(0,0,0,0.35)]">
                 {tool.proficiency}%
               </p>
               <div className="mt-3">
-                {/* <ShinyText
+                <ShinyText
                   text={tool.nama}
                   disabled={false}
                   speed={4}
-                  className="block text-base font-semibold text-white"
-                /> */}
-                <p className="mt-2 text-[11px] uppercase tracking-[0.28em] text-zinc-300/70">
+                  className="block font-semibold text-black "
+                />
+                <p className="mt-2 text-[11px] uppercase tracking-[0.28em] text-white/85 drop-shadow-[0_2px_10px_rgba(0,0,0,0.28)]">
                   Proficiency
                 </p>
               </div>
