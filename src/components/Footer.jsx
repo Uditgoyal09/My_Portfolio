@@ -1,7 +1,7 @@
 
 import "remixicon/fonts/remixicon.css";
 import { Link, NavLink } from "react-router-dom";
-import { motion, useMotionValue, useSpring } from "motion/react";
+import { motion as Motion, useMotionValue, useSpring } from "motion/react";
 import { useRef } from "react";
 import { ArrowUpRight, Download, Mail, MapPin } from "lucide-react";
 import { navigationLinks, socialLinks } from "../data";
@@ -27,7 +27,7 @@ function SocialBtn({ href, label, iconClass, color, borderColor, backgroundColor
   const isMail = href.startsWith("mailto:");
 
   return (
-    <motion.a
+    <Motion.a
       ref={m.ref}
       href={href}
       target={isMail ? undefined : "_blank"}
@@ -50,7 +50,7 @@ function SocialBtn({ href, label, iconClass, color, borderColor, backgroundColor
       }}
     >
       <i className={`${iconClass} text-lg`} />
-    </motion.a>
+    </Motion.a>
   );
 }
 
@@ -64,7 +64,7 @@ const Footer = () => {
   );
 
   return (
-    <motion.footer
+    <Motion.footer
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.05 }}
@@ -84,17 +84,17 @@ const Footer = () => {
           ZONE 1 — BIG CTA
       ═══════════════════════════════════════ */}
       <section className="relative border-b border-white/[0.06]">
-        <div className="mx-auto max-w-screen-xl px-6 py-20 md:px-12 lg:px-16">
-          <div className="flex flex-col gap-12 lg:flex-row lg:items-end lg:justify-between">
+        <div className="mx-auto max-w-screen-xl px-6 py-12 md:px-12 lg:px-16">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
 
             {/* headline side */}
-            <div className="max-w-2xl">
-              <motion.div
+            <div className="max-w-3xl">
+              <Motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45 }}
-                className="mb-6 inline-flex items-center gap-2"
+                className="mb-4 inline-flex items-center gap-2"
               >
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
@@ -103,43 +103,41 @@ const Footer = () => {
                 <span className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-400/80">
                   Available for work
                 </span>
-              </motion.div>
+              </Motion.div>
 
-              <motion.h2
+              <Motion.h2
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
-                className="text-5xl font-bold leading-[1.1] tracking-tight text-white md:text-6xl lg:text-[4.5rem]"
+                className="max-w-4xl text-4xl font-bold leading-[1] tracking-tight text-white md:text-5xl lg:text-[3.9rem]"
               >
-                Have a project
-                <br />
-                in{" "}
+                Have a project in{" "}
                 <span className="bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent">
                   mind?
                 </span>
-              </motion.h2>
+              </Motion.h2>
 
-              <motion.p
+              <Motion.p
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.12 }}
-                className="mt-6 max-w-lg text-[15px] leading-7 text-zinc-400"
+                className="mt-4 max-w-2xl text-[15px] leading-7 text-zinc-400"
               >
                 I&apos;m open to freelance projects, internships, and
                 collaborations. If you have an idea worth building — let&apos;s
                 make it happen together.
-              </motion.p>
+              </Motion.p>
             </div>
 
             {/* CTA side */}
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.18 }}
-              className="flex flex-wrap gap-3"
+              className="flex flex-wrap gap-3 lg:min-w-[320px] lg:justify-end"
             >
               <NavLink
                 to="/contact"
@@ -159,7 +157,7 @@ const Footer = () => {
                 <Download size={15} />
                 Download CV
               </a>
-            </motion.div>
+            </Motion.div>
           </div>
         </div>
       </section>
@@ -299,7 +297,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </motion.footer>
+    </Motion.footer>
   );
 };
 

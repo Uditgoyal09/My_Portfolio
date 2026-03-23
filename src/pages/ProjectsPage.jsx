@@ -458,7 +458,6 @@ function CardInfo({ project, index, tools, align }) {
 
 export default function ProjectsPage() {
   const railRef = useRef(null);
-  const sectionRef = useRef(null);
   const dragStateRef = useRef({
     isDragging: false,
     startX: 0,
@@ -469,66 +468,80 @@ export default function ProjectsPage() {
   const [maxScroll, setMaxScroll] = useState(0);
   const [activeCategory, setActiveCategory] = useState("All");
 
-  useEffect(() => {
-    const updateMax = () => {
-      if (!railRef.current) return;
-
-      const nextMax = Math.max(
-        0,
-        railRef.current.scrollWidth - railRef.current.clientWidth
-      );
-
-      setMaxScroll(nextMax);
-
-      // reset only when layout actually changes
-      railRef.current.scrollLeft = 0;
-      setScrollX(0);
-    };
-
-    updateMax();
-    window.addEventListener("resize", updateMax);
-
-    return () => window.removeEventListener("resize", updateMax);
-  }, [activeCategory]);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    const rail = railRef.current;
-    if (!section || !rail) return;
-
-    const onWheel = (event) => {
-      const rect = section.getBoundingClientRect();
-      const inView = rect.top < window.innerHeight && rect.bottom > 0;
-      if (!inView) return;
-
-      const delta = event.deltaY !== 0 ? event.deltaY : event.deltaX;
-
-      const nextScroll = Math.min(
-        maxScroll,
-        Math.max(0, rail.scrollLeft + delta * 2) // reduced speed
-      );
-
-      // stop hijacking scroll at edges (VERY IMPORTANT)
-      if (nextScroll === rail.scrollLeft) return;
-
-      event.preventDefault();
-
-      // direct scroll (no smooth)
-      rail.scrollLeft = nextScroll;
-
-      setScrollX(nextScroll);
-    };
-
-    section.addEventListener("wheel", onWheel, { passive: false });
-
-    return () => section.removeEventListener("wheel", onWheel);
-  }, [maxScroll]);
-
   const categories = ["All", ...Array.from(new Set(listProyek.map((project) => project.category)))];
   const filteredProjects =
     activeCategory === "All"
       ? listProyek
       : listProyek.filter((project) => project.category === activeCategory);
+
+  const syncScrollMetrics = () => {
+    if (!railRef.current) {
+      return;
+    }
+
+    const rail = railRef.current;
+    const nextMax = Math.max(0, rail.scrollWidth - rail.clientWidth);
+    const nextScroll = Math.min(rail.scrollLeft, nextMax);
+
+    if (nextScroll !== rail.scrollLeft) {
+      rail.scrollLeft = nextScroll;
+    }
+
+    setMaxScroll(nextMax);
+    setScrollX(nextScroll);
+  };
+
+  useEffect(() => {
+    syncScrollMetrics();
+
+    const rail = railRef.current;
+    if (!rail) {
+      return undefined;
+    }
+
+    const resizeObserver = new ResizeObserver(() => {
+      syncScrollMetrics();
+    });
+
+    resizeObserver.observe(rail);
+    window.addEventListener("resize", syncScrollMetrics);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", syncScrollMetrics);
+    };
+  }, [filteredProjects]);
+
+  useEffect(() => {
+    const rail = railRef.current;
+    if (!rail) return;
+
+    const onWheel = (event) => {
+      if (maxScroll <= 0) {
+        return;
+      }
+
+      const delta = event.deltaY !== 0 ? event.deltaY : event.deltaX;
+      if (delta === 0) {
+        return;
+      }
+
+      const nextScroll = Math.min(
+        maxScroll,
+        Math.max(0, rail.scrollLeft + delta * 1.35)
+      );
+
+      if (nextScroll === rail.scrollLeft) return;
+
+      event.preventDefault();
+      rail.scrollLeft = nextScroll;
+      setScrollX(nextScroll);
+    };
+
+    rail.addEventListener("wheel", onWheel, { passive: false });
+
+    return () => rail.removeEventListener("wheel", onWheel);
+  }, [maxScroll]);
 
   const progress = maxScroll > 0 ? (scrollX / maxScroll) * 100 : 0;
   const projectCardWidth = "clamp(420px, 32vw, 520px)";
@@ -598,7 +611,6 @@ export default function ProjectsPage() {
 
   return (
     <div
-      ref={sectionRef}
       style={{
         fontFamily: "'Segoe UI',system-ui,-apple-system,sans-serif",
         color: "#fff",
@@ -741,7 +753,7 @@ export default function ProjectsPage() {
                 display: "flex",
                 flexDirection: "column",
                 borderRight:
-                  index < listProyek.length - 1
+                  index < filteredProjects.length - 1
                     ? "1px solid rgba(255,255,255,0.07)"
                     : "none",
                 padding: "clamp(20px, 2.2vw, 30px) clamp(20px, 2.4vw, 32px) 16px",

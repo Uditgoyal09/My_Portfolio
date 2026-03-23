@@ -164,7 +164,7 @@ const Navbar = () => {
   const navRef = useRef(null);
   const location = useLocation();
 
-  const orderedBasePaths = ["/", "/projects", "/skills"];
+  const orderedBasePaths = ["/" , "/skills","/projects"];
   const baseLinks = orderedBasePaths.map((h) => navigationLinks.find((l) => l.href === h)).filter(Boolean);
   const contactLink = navigationLinks.find((l) => l.href === "/contact");
   const links = [...baseLinks, ...extraLinks, ...(contactLink ? [contactLink] : [])];
