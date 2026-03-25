@@ -51,7 +51,7 @@ export const socialLinks = [
     backgroundColor: "rgba(200,200,200,0.06)",
   },
   {
-    href: "https://www.linkedin.com/in/udit-goyal/",
+    href: "https://www.linkedin.com/in/udit-goyal09/",
     label: "LinkedIn",
     iconClass: "ri-linkedin-fill",
     color: "#084a8c",
@@ -70,8 +70,8 @@ export const socialLinks = [
 
 export const featuredStats = [
   { label: "Projects Completed", value: 8, suffix: "+" },
-  { label: "Clients Worked With", value: 10, suffix: "+" },
-  { label: "Years of Experience", value: 3, suffix: "+" },
+  { label: "Clients Worked With", value: 5, suffix: "+" },
+  { label: "Years of Experience", value: 1, suffix: "+" },
  
 ]
 
@@ -107,7 +107,7 @@ export const achievements = [
   title: "Open Source Contributor",
   description:
     "Contributed fixes, interface improvements, and documentation updates to public repositories while gaining experience with Git workflows, issue tracking, and pull request reviews.",
-  metric: "10+ PRs",
+  metric: "5+ PRs",
   category: "Open Source",
   tag: "Open Source Work",
   highlights: ["Git workflow", "Team collaboration", "Review process"],
@@ -120,7 +120,7 @@ export const achievements = [
     title: "Product Build Sprints",
     description:
       "Delivered multiple portfolio, academic, and client-style builds under short timelines with focus on polished UI, responsive behavior, accessibility, and launch readiness.",
-    metric: "5+ Launches",
+    metric: "3+ Launches",
     category: "Project Delivery",
     tag: "Multi-project delivery",
     highlights: ["Fast execution", "UI polish", "Responsive builds"],

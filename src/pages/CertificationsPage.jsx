@@ -383,7 +383,7 @@ const CertificationsPage = () => {
           return <Card key={item.id} item={item} offset={offset} onView={setModalItem} viewport={viewport} />;
         })}
       </div>
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: viewport.mobile ? 10 : 18, marginTop: viewport.mobile ? 0 : 10, position: "relative", zIndex: 10, paddingInline: 12, flexWrap: "wrap" }}>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: viewport.mobile ? 10 : 18, marginTop: viewport.mobile ? 6 : 14, position: "relative", zIndex: 10, paddingInline: 12, flexWrap: "wrap" }}>
         <motion.button whileHover={{ y: -2 }} whileTap={{ scale: 0.94 }} onClick={() => goTo(activeIdx - 1)} style={{ background: "transparent", border: "1px solid #1a3050", borderRadius: 9, padding: viewport.mobile ? "8px 16px" : "8px 22px", color: "#4da6ff", fontSize: viewport.mobile ? 12 : 13, cursor: "pointer" }}>prev</motion.button>
         <div style={{ display: "flex", gap: 8, alignItems: "center", order: viewport.mobile ? 3 : 0, width: viewport.mobile ? "100%" : "auto", justifyContent: "center" }}>
           {DATA.map((item, i) => <motion.div key={item.id} onClick={() => goTo(i)} animate={{ scale: i === activeIdx ? 1.5 : 1, background: i === activeIdx ? item.color : "#1e3050" }} style={{ width: 7, height: 7, borderRadius: "50%", cursor: "pointer" }} />)}

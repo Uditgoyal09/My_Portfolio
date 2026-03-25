@@ -36,7 +36,7 @@ const HomePage = () => {
             </div>
             <div className="min-w-0">
               <p className="text-[10px] uppercase tracking-[0.28em] text-cyan-300/80 sm:text-xs sm:tracking-[0.35em]">Digital Portfolio</p>
-              <p className="text-sm leading-5 text-zinc-300">Avoid it or undertake it.</p>
+              <p className="text-sm leading-5 text-zinc-300">Designing web products that feel sharp and useful.</p>
             </div>
           </motion.div>
 
@@ -47,15 +47,16 @@ const HomePage = () => {
             variants={heroItem}
             className="mb-8 font-['Syne','Clash_Display',sans-serif] text-[clamp(1.2rem,4vw,4rem)] font-extrabold leading-[0.9] tracking-[-0.04em] text-white"
           >
-            <span className="block">The web is crowded.</span>
+            <span className="block">Build Bold.</span>
             <span className="block">
-              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-300 bg-clip-text text-transparent">Let&apos;s</span> make you stand out.
+              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-300 bg-clip-text text-transparent">Ship Smart.</span>
             </span>
+            <span className="block">Stand Out.</span>
           </motion.h1>
 
           <motion.div initial="hidden" animate="show" custom={0.2} variants={heroItem}>
             <BlurText
-              text="I'm Udit, a full stack developer focused on creating sleek interfaces, strong frontend systems, and polished product experiences that balance performance, clarity, and visual quality."
+              text="Full-stack developer focused on clean interfaces, scalable backend systems, and user journeys that feel fast, clear, and production ready from day one."
               delay={200}
               animateBy="words"
               direction="top"

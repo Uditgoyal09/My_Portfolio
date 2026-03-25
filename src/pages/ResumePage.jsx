@@ -255,7 +255,7 @@ const ResumePage = () => {
       <div className="my-10 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="rounded-[30px] border border-white/10 bg-white/[0.03] p-4 backdrop-blur-xl sm:p-6">
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap justify-center gap-3">
           {resumeTabs.map((tab) => {
             const isActive = tab.id === activeTab;
 

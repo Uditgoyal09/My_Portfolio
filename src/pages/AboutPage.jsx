@@ -382,7 +382,7 @@ const AboutPage = () => {
 
             {sectionVisible ? (
               <BlurText
-                text="I'm Udit, a full-stack developer passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions."
+                text="I am Udit Goyal, a Computer Science student and full-stack developer who enjoys building complete digital products from idea to deployment. I work across React, Next.js, Node.js, and modern databases to create applications that are responsive, reliable, and easy to use. My focus is simple: clear UI, solid architecture, and features that solve real user problems."
                 delay={120}
                 animateBy="words"
                 direction="top"
@@ -390,13 +390,13 @@ const AboutPage = () => {
               />
             ) : (
               <p className="max-w-2xl text-base leading-8 text-zinc-300/0 md:text-lg xl:text-[1.06rem]">
-                I&apos;m Udit, a full-stack developer passionate about building modern, high-performance applications with an intuitive user experience.
+                I am Udit Goyal, a Computer Science student and full-stack developer building responsive, reliable, and user-focused web products.
               </p>
             )}
 
             {/* Tag pills */}
             <div className="tag-row">
-              {["Full-Stack", "Cloud", "React", "Node.js", "UX-Focused"].map((t) => (
+              {["Full-Stack", "Problem Solving", "React", "Node.js"].map((t) => (
                 <span key={t} className="tag">{t}</span>
               ))}
             </div>
