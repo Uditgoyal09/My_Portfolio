@@ -17,6 +17,12 @@ import Tools16 from "/assets/tools/ts.png";
 import Tools17 from "/assets/tools/php.png";
 import Tools18 from "/assets/tools/vite.png";
 import Tools19 from "/assets/tools/mysql.png";
+import Tools20 from "/assets/tools/Tools20.jpg";
+import Tools21 from "/assets/tools/Tools21.jpg";
+import Tools22 from "/assets/tools/Tools22.jpg";
+import Tools23 from "/assets/tools/Tools23.jpg";
+import Tools24 from "/assets/tools/Tools24.jpg";
+// import Tools25 from "/assets/tools/Tools25.jpg";
 
 import {
   HiOutlineSparkles,
@@ -204,28 +210,27 @@ export const listTools = [
   { id: 2, gambar: Tools2, nama: "React JS", ket: "Frontend Framework", category: "Frontend", proficiency: 92 },
   { id: 3, gambar: Tools3, nama: "Next JS", ket: "Full-stack Framework", category: "Frontend", proficiency: 84 },
   { id: 4, gambar: Tools4, nama: "Tailwind CSS", ket: "Styling Framework", category: "Frontend", proficiency: 93 },
-  { id: 5, gambar: Tools5, nama: "Bootstrap", ket: "CSS Framework", category: "Frontend", proficiency: 81 },
+  // { id: 5, gambar: Tools5, nama: "Bootstrap", ket: "CSS Framework", category: "Frontend", proficiency: 81 },
   { id: 6, gambar: Tools6, nama: "JavaScript", ket: "Programming Language", category: "Languages", proficiency: 91 },
   { id: 7, gambar: Tools7, nama: "Node JS", ket: "JavaScript Runtime", category: "Backend", proficiency: 83 },
   { id: 8, gambar: Tools8, nama: "GitHub", ket: "Version Control Platform", category: "Tools", proficiency: 90 },
-  { id: 9, gambar: Tools9, nama: "Adobe Illustrator", ket: "Design App", category: "Design", proficiency: 70 },
+  // { id: 9, gambar: Tools9, nama: "Adobe Illustrator", ket: "Design App", category: "Design", proficiency: 70 },
   { id: 10, gambar: Tools10, nama: "Canva", ket: "Design App", category: "Design", proficiency: 88 },
   { id: 11, gambar: Tools11, nama: "Figma", ket: "UI Design Tool", category: "Design", proficiency: 86 },
-  { id: 12, gambar: Tools12, nama: "Kotlin", ket: "Programming Language", category: "Languages", proficiency: 67 },
-  { id: 13, gambar: Tools13, nama: "Firebase", ket: "Backend Platform", category: "Backend", proficiency: 80 },
+  // { id: 12, gambar: Tools12, nama: "Kotlin", ket: "Programming Language", category: "Languages", proficiency: 67 },
+  // { id: 13, gambar: Tools13, nama: "Firebase", ket: "Backend Platform", category: "Backend", proficiency: 80 },
   { id: 14, gambar: Tools14, nama: "HTML", ket: "Markup Language", category: "Frontend", proficiency: 95 },
   { id: 15, gambar: Tools15, nama: "CSS", ket: "Styling Language", category: "Frontend", proficiency: 93 },
-  { id: 16, gambar: Tools16, nama: "TypeScript", ket: "Typed JavaScript", category: "Languages", proficiency: 80 },
+  // { id: 16, gambar: Tools16, nama: "TypeScript", ket: "Typed JavaScript", category: "Languages", proficiency: 80 },
   { id: 17, gambar: Tools17, nama: "PHP", ket: "Backend Language", category: "Backend", proficiency: 74 },
   { id: 18, gambar: Tools18, nama: "Vite", ket: "Frontend Build Tool", category: "Frontend", proficiency: 84 },
   { id: 19, gambar: Tools19, nama: "MySQL", ket: "Database", category: "Backend", proficiency: 78 },
-  { id: 20, gambar: null, nama: "MongoDB", ket: "NoSQL Database", category: "Backend", proficiency: 79 },
-  { id: 21, gambar: null, nama: "NoSQL", ket: "Non-relational Data Modeling", category: "Backend", proficiency: 76 },
-  { id: 22, gambar: null, nama: "C", ket: "Programming Language", category: "Languages", proficiency: 73 },
-  { id: 23, gambar: null, nama: "C++", ket: "Programming Language", category: "Languages", proficiency: 82 },
-  { id: 24, gambar: null, nama: "Java", ket: "Programming Language", category: "Languages", proficiency: 80 },
-  { id: 25, gambar: null, nama: "Antigravity", ket: "Creative Interaction Tooling", category: "Tools", proficiency: 68 },
-  { id: 26, gambar: null, nama: "Atlassian", ket: "Team Workflow Platform", category: "Tools", proficiency: 75 },
+  { id: 21, gambar: Tools20, nama: "NoSQL", ket: "Non-relational Data Modeling", category: "Backend", proficiency: 76 },
+  { id: 22, gambar: Tools22, nama: "C", ket: "Programming Language", category: "Languages", proficiency: 73 },
+  { id: 23, gambar: Tools21, nama: "C++", ket: "Programming Language", category: "Languages", proficiency: 82 },
+  { id: 24, gambar: Tools23, nama: "Java", ket: "Programming Language", category: "Languages", proficiency: 80 },
+  { id: 25, gambar: Tools24, nama: "Antigravity", ket: "Creative Interaction Tooling", category: "Tools", proficiency: 78 },
+  // { id: 26, gambar: Tools25, nama: "Atlassian", ket: "Team Workflow Platform", category: "Tools", proficiency: 75 },
 ];
 
 export const listProyek = [
@@ -239,16 +244,16 @@ export const listProyek = [
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://github.com/Uditgoyal09/Helping-Hands-NGO",
   },
-  {
-    id: 2,
-    title: "Carbon Tracker",
-    subtitle: "Sustainability dashboard to log activities, visualize emissions, and track reduction goals...",
-    fullDescription:
-      "Sustainability dashboard to log activities, visualize emissions, and track reduction goals over time.",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://carbon-tracker-main1.onrender.com/",
-  },
+  // {
+  //   id: 2,
+  //   title: "Carbon Tracker",
+  //   subtitle: "Sustainability dashboard to log activities, visualize emissions, and track reduction goals...",
+  //   fullDescription:
+  //     "Sustainability dashboard to log activities, visualize emissions, and track reduction goals over time.",
+  //   borderColor: "#10B981",
+  //   gradient: "linear-gradient(180deg, #10B981, #000)",
+  //   url: "https://carbon-tracker-main1.onrender.com/",
+  // },
   {
     id: 3,
     title: "Ganesh Jeweller - Wholesale Ordering Platform",

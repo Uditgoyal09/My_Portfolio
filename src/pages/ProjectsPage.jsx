@@ -27,19 +27,19 @@ const listProyek = [
     github: "https://github.com/Uditgoyal09/CrediScore.git",
     live: "https://credi-score-client.vercel.app/",
   },
-  {
-    id: 3,
-    title: "Carbon Tracker",
-    category: "Dashboard / Sustainability",
-    tools: "React, Node.js, Charts, REST APIs",
-    fullDescription:
-      "Sustainability dashboard to log activities, visualize emissions, and track reduction goals over time.",
-    image:
-      "/assets/projects/carbontracker.jpg",
-    video: null,
-    github: "https://github.com/Uditgoyal09/Carbon-Tracker.git",
-    live: "https://carbon-tracker-lovat.vercel.app/login",
-  },
+  // {
+  //   id: 3,
+  //   title: "Carbon Tracker",
+  //   category: "Dashboard / Sustainability",
+  //   tools: "React, Node.js, Charts, REST APIs",
+  //   fullDescription:
+  //     "Sustainability dashboard to log activities, visualize emissions, and track reduction goals over time.",
+  //   image:
+  //     "/assets/projects/carbontracker.jpg",
+  //   video: null,
+  //   github: "https://github.com/Uditgoyal09/Carbon-Tracker.git",
+  //   live: "https://carbon-tracker-lovat.vercel.app/login",
+  // },
   {
     id: 4,
     title: "Helping Hand - NGO Website",

@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 import { ArrowRight, Download, Sparkles } from "lucide-react";
 import ProfileCard from "../components/ProfileCard/ProfileCard";
 import ShinyText from "../components/ShinyText/ShinyText";
 import BlurText from "../components/BlurText/BlurText";
+// eslint-disable-next-line no-unused-vars
 import { featuredStats } from "../data";
 import AboutPage from "./AboutPage";
 

@@ -2,6 +2,7 @@
 
 
 import { useState, useRef, useEffect, useCallback } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import {PageHeading} from "../components/PageHeading";
 
@@ -105,10 +106,10 @@ const getViewport = (width) => {
       mobile: true,
       tablet: false,
       stageHeight: 420,
-      cardWidth: min(290, max(220, width - 56)),
+      cardWidth: Math.min(290, Math.max(220, width - 56)),
       cardOffsetY: 155,
-      sideX1: max(118, width * 0.28),
-      sideX2: max(170, width * 0.4),
+      sideX1: Math.max(118, width * 0.28),
+      sideX2: Math.max(170, width * 0.4),
       scale1: 0.86,
       scale2: 0.66,
       blur1: 1,
@@ -127,10 +128,10 @@ const getViewport = (width) => {
       mobile: false,
       tablet: true,
       stageHeight: 500,
-      cardWidth: min(320, max(250, width * 0.36)),
+      cardWidth: Math.min(320, Math.max(250, width * 0.36)),
       cardOffsetY: 180,
-      sideX1: min(250, width * 0.26),
-      sideX2: min(390, width * 0.4),
+      sideX1: Math.min(250, width * 0.26),
+      sideX2: Math.min(390, width * 0.4),
       scale1: 0.78,
       scale2: 0.58,
       blur1: 2,

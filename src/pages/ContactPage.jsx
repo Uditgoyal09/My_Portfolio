@@ -10,6 +10,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { PageHeading } from "../components/PageHeading";
+// eslint-disable-next-line no-unused-vars
 import { socialLinks } from "../data";
 
 const EMAILJS_SERVICE_ID =

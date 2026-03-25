@@ -5,7 +5,7 @@ const SocialSidebar = () => {
   return (
     <aside className="pointer-events-none fixed left-5 top-1/2 z-40 hidden -translate-y-1/2 xl:block">
       <div className="pointer-events-auto flex flex-col items-center gap-5">
-        {socialLinks.map((item, index) => {
+        {socialLinks.map((item) => {
           const isMail = item.href.startsWith("mailto:");
 
           return (
