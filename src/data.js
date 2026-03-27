@@ -91,10 +91,10 @@ export const achievements = [
   },
   {
     year: "2026",
-    title: "LeetCode 50+ Problems Solved",
+    title: "LeetCode 100+ Problems Solved",
     description:
       "Built depth in data structures and algorithms through regular problem solving across trees, graphs, sliding window, binary search, backtracking, and dynamic programming patterns.",
-    metric: "50+",
+    metric: "100+",
     category: "Coding Practice",
     tag: "Problem solving Badge",
     highlights: ["DSA depth", "Interview prep", "Pattern recognition"],
