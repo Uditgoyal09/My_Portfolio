@@ -8,7 +8,7 @@ import {PageHeading} from "../components/PageHeading";
 
 const DATA = [
   {
-    id: 1,
+    id: 5,
     title: "Internship Completion Certificate",
     company: "Green Mandi Deals Private Limited",
     period: "Jun 2025 - Aug 2025",
@@ -21,7 +21,7 @@ const DATA = [
     link: "https://drive.google.com/file/d/17s7EUo1H2Lx6CcqiRzC9PckPIgY02p_Z/view?usp=drive_link",
   },
   {
-    id: 2,
+    id: 6,
     title: "Certificate of Recognition",
     company: "Student Organization ECHO, Lovely Professional University",
     period: "Feb 2024",
@@ -34,7 +34,7 @@ const DATA = [
     link: "https://drive.google.com/file/d/1arsGaX29o_mMx8qakXNkcmsXZW-O3nly/view?usp=sharing",
   },
   {
-    id: 3,
+    id: 4,
     title: "ChatGPT-4 Prompt Engineering: ChatGPT, Generative AI & LLM",
     company: "Infosys Springboard",
     period: "Aug 2025",
@@ -47,7 +47,7 @@ const DATA = [
     link: "https://drive.google.com/file/d/16ZLIWgs5TQt7WhY_3bhJpQM0eKAy0Axg/view?usp=sharing",
   },
   {
-    id: 4,
+    id: 2,
     title: "Privacy and Security in Online Social Media",
     company: "NPTEL / IIIT Hyderabad",
     period: "Jan 2025 - Apr 2025",
@@ -60,7 +60,7 @@ const DATA = [
     link: "https://drive.google.com/file/d/1laQ6f9TvJdOIBFC7YFOpXuO9LcbaRcsz/view?usp=sharing",
   },
   {
-    id: 5,
+    id: 3,
     title: "Full Stack Development",
     company: "Board Infinity",
     period: "Feb 2024",
@@ -73,7 +73,7 @@ const DATA = [
     link: "https://drive.google.com/file/d/1ZLeIwx5Y18Gut0qY6IGLobdFY1ADs_rG/view?usp=sharing",
   },
   {
-    id: 6,
+    id: 1,
     title: "AWS SimuLearn: Cloud Computing Essentials",
     company: "AWS Training & Certification",
     period: "Mar 2026",
