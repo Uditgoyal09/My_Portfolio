@@ -33,69 +33,10 @@ const resumeTabs = [
       },
     ],
   },
-  {
-    id: "internship",
-    label: "Internship",
-    eyebrow: "Hands-On Training",
-    title: "Internship Experience",
-    description:
-      "Practical training experience focused on shipping product features and building reliable systems.",
-    items: [
-      {
-        title: "Web Developer Intern",
-        subtitle: "Green Mandi Deals Private Limited",
-        period: "Jun 2025 - Aug 2025",
-        detail:
-          "Architected and developed core components of the admin workflow, helping administrators oversee platform operations, enforce role-based access control, and manage user permissions and system activity efficiently.",
-        highlight: "Certificate",
-        tech: "Tech: Next.js, React.js, Node.js, Express.js, TypeScript",
-      },
-    ],
-  },
-  {
-    id: "training",
-    label: "Training",
-    eyebrow: "Courses and Certifications",
-    title: "Training and Certifications",
-    description:
-      "Structured learning programs and certifications that strengthened my software and cloud fundamentals.",
-    items: [
-      {
-        title: "AWS SimuLearn Cloud Computing Essentials",
-        subtitle: "AWS Training & Certification",
-        period: "Mar 2026",
-        detail: "Cloud computing fundamentals and platform basics.",
-        highlight: "AWS",
-      },
-      {
-        title: "Summer Training in Object Oriented Programming using C++",
-        subtitle: "LPU",
-        period: "Aug 2025",
-        detail: "Training focused on object-oriented programming concepts and implementation in C++.",
-        highlight: "C++ Training",
-      },
-      {
-        title: "Privacy and Security in Online Social Media",
-        subtitle: "NPTEL",
-        period: "Apr 2025",
-        detail: "Coursework around privacy, digital safety, and secure behavior in social platforms.",
-        highlight: "NPTEL",
-      },
-      {
-        title: "Full Stack Development",
-        subtitle: "Board Infinity",
-        period: "Feb 2024",
-        detail: "Training in full-stack development workflows and application building fundamentals.",
-        highlight: "Full Stack",
-      },
-    ],
-  },
 ];
 
 const resumeHighlights = [
   { value: "7.76", label: "Current CGPA" },
-  { value: "1", label: "Internship" },
-  { value: "4", label: "Trainings" },
   { value: "3", label: "Education Stages" },
 ];
 
@@ -215,7 +156,7 @@ const ResumePage = () => {
         >
           <PageHeading
             title="Resume"
-            description="This section now focuses only on my education, internship training, and certification-based learning journey."
+            description="This section now focuses on my academic background and education journey."
             className="mb-0 lg:mx-0 lg:items-start lg:text-left"
           />
         </div>
@@ -292,7 +233,7 @@ const ResumePage = () => {
       </div>
 
       <p className="mt-12 text-center text-xs tracking-[0.28em] text-zinc-600">
-        Resume focus: education and training
+        Resume focus: education
       </p>
     </section>
   );
