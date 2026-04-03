@@ -328,6 +328,16 @@ const CertificationsPage = () => {
   }, [total]);
 
   useEffect(() => {
+    if (modalItem) return undefined;
+
+    const intervalId = window.setInterval(() => {
+      setActiveIdx((prevIdx) => (prevIdx + 1) % total);
+    }, 5000);
+
+    return () => window.clearInterval(intervalId);
+  }, [modalItem, total]);
+
+  useEffect(() => {
     const fn = (e) => {
       e.preventDefault();
       accumRef.current += e.deltaY;
@@ -370,7 +380,7 @@ const CertificationsPage = () => {
         <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
           <PageHeading
             title="Certifications"
-            description="Drag, scroll, or use arrows to explore the certificates."
+            description="Certificates auto-rotate every 5 seconds. Drag, scroll, or use arrows to explore them manually."
             className="mb-0"
           />
         </motion.div>
